@@ -79,10 +79,6 @@ Forwarding logic:
 - **Unicast known**: verified with `same_vlan_extended()` (VLAN ID + extended ID)
 - **Broadcast/unknown**: verified with `same_vlan()` (VLAN ID only)
 
-### Task 3 — STP
-
-Not implemented. The physical loop in the topology is eliminated by hardcoding the blocking of interface `rr-0-2` on Switch2.
-
 ## Screenshots
 
 **ex1.png** — Successful pings between hosts on the same VLAN, with Wireshark capturing ICMP traffic and all three switches running.
@@ -90,7 +86,3 @@ Not implemented. The physical loop in the topology is eliminated by hardcoding t
 **ex2.png** — VLAN isolation in action:
 - `ping host0 → host2` (both on VLAN 1): **SUCCESS** (0% packet loss)
 - `ping host0 → host1` (VLAN 1 → VLAN 2): **FAIL** (100% packet loss, Destination Host Unreachable)
-
-## Author
-
-Darius Zaharescu
